@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landrtons Music Co. | Pro Guitars &amp; Gear — New York</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@600;700&family=Yellowtail&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-black: #000000;
+      --bg-dark: #111111;
+      --bg-card: #181818;
+      --bg-light: #f2f2f2;
+      --banner-blue: #1877b8;
+      --accent-red: #d92626;
+      --accent-gold: #f5b400;
+      --text-white: #ffffff;
+      --text-muted: #a3a3a3;
+      --border-dark: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+
+    /* TOP NOTICE BANNER */
+    .top-alert {
+      background-color: var(--banner-blue);
+      color: #fff;
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 8px 14px;
+    }
+    .top-alert a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* TRUST & CONTACT BAR */
+    .trust-bar {
+      background-color: #141414;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 7px 12px;
+      font-size: 0.8rem;
+    }
+    .stars {
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+    }
+    .trust-divider {
+      color: #444;
+    }
+    .trust-link {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+    }
+    .trust-link:hover {
+      text-decoration: underline;
+    }
+
+    /* MAIN HEADER & LOGO */
+    header {
+      background-color: var(--bg-black);
+      padding: 12px 16px 14px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #222;
+    }
+
+    .header-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      text-decoration: none;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .brand-script {
+      font-family: 'Yellowtail', cursive;
+      font-size: 2.05rem;
+      letter-spacing: 0.5px;
+      transform: rotate(-2deg);
+      display: inline-block;
+    }
+    .brand-sub {
+      font-size: 0.58rem;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: #d4d4d4;
+      margin-left: 14px;
+      margin-top: 2px;
+      font-weight: 600;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -4px;
+      right: -6px;
+      background-color: var(--accent-red);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      min-width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+    }
+
+    /* SEARCH BAR */
+    .search-wrapper {
+      max-width: 1200px;
+      margin: 12px auto 0;
+      display: flex;
+      border: 1px solid #555;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #000;
+    }
+    .search-wrapper input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .search-wrapper button {
+      background: #fff;
+      color: #000;
+      border: none;
+      width: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* PROMO STRIP */
+    .promo-strip {
+      background-color: #ffffff;
+      color: #111;
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    .promo-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .promo-arrow {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: #444;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+    .promo-card {
+      background: var(--bg-light);
+      flex: 1;
+      padding: 8px 14px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .promo-text strong {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .promo-text span {
+      font-size: 0.74rem;
+      color: #555;
+    }
+
+    /* HERO DEAL BANNER */
+    .hero {
+      position: relative;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 15%, rgba(0, 0, 0, 0.45) 60%, rgba(15, 10, 25, 0.85) 100%),
+                  url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      padding: 36px 20px;
+    }
+    .hero-tag {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e5e5e5;
+      margin-bottom: 8px;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.08;
+      text-transform: uppercase;
+      max-width: 650px;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 0.92rem;
+      color: #e0e0e0;
+      max-width: 520px;
+      margin-bottom: 20px;
+    }
+    .hero-cta {
+      background-color: #fff;
+      color: #000;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 11px 26px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* STOREFRONT */
+    .store-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    .category-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      scrollbar-width: none;
+    }
+    .category-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-btn {
+      background: #1f1f1f;
+      color: #ddd;
+      border: 1px solid #333;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .cat-btn.active,
+    .cat-btn:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .section-header h2 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-img-box {
+      background: #fff;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      position: relative;
+    }
+    .product-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .stock-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #15803d;
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .product-info {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-cat {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .product-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .product-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-top: auto;
+      margin-bottom: 12px;
+    }
+    .add-cart-btn {
+      width: 100%;
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+    .add-cart-btn:active {
+      transform: scale(0.98);
+      background: #ddd;
+    }
+
+    /* SLIDE-OUT CART & CHECKOUT DRAWER */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 200;
+      display: none;
+    }
+    .drawer-overlay.open {
+      display: block;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 410px;
+      height: 100vh;
+      background: #141414;
+      border-left: 1px solid #333;
+      z-index: 210;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.28s ease;
+    }
+    .cart-drawer.open {
+      right: 0;
+    }
+
+    .drawer-header {
+      background: #000;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .drawer-header h3 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    .close-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    .cart-item img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 4px;
+      padding: 4px;
+    }
+    .cart-item-details {
+      flex: 1;
+    }
+    .cart-item-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .cart-item-price {
+      font-size: 0.82rem;
+      color: var(--accent-gold);
+      margin-top: 2px;
+    }
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .qty-btn {
+      background: #333;
+      color: #fff;
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    /* CUSTOMER & NEW YORK SHIPPING DETAILS FORM */
+    .checkout-form {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid #2e2e2e;
+    }
+    .checkout-form h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      color: #ccc;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      background: #0b0b0b;
+      border: 1px solid #383838;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #1877b8;
+    }
+
+    .drawer-footer {
+      background: #000;
+      padding: 16px;
+      border-top: 1px solid #2a2a2a;
+    }
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .pay-btn {
+      width: 100%;
+      background: #16a34a;
+      color: #fff;
+      border: none;
+      padding: 13px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .pay-btn:disabled {
+      background: #444;
+      cursor: not-allowed;
+    }
+
+    /* MOBILE MENU DRAWER */
+    .nav-drawer {
+      position: fixed;
+      top: 0;
+      left: -280px;
+      width: 260px;
+      height: 100vh;
+      background: #0d0d0d;
+      border-right: 1px solid #2a2a2a;
+      z-index: 210;
+      padding: 20px;
+      transition: left 0.25s ease;
+    }
+    .nav-drawer.open {
+      left: 0;
+    }
+    .nav-drawer ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .nav-drawer li {
+      padding: 12px 0;
+      border-bottom: 1px solid #222;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* OFFICIAL RECEIPT MODAL */
+    .receipt-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      overflow-y: auto;
+    }
+    .receipt-modal.open {
+      display: flex;
+    }
+    .receipt-box {
+      background: #ffffff;
+      color: #111111;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 8px;
+      padding: 24px 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .receipt-header {
+      text-align: center;
+      border-bottom: 2px dashed #ccc;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+    }
+    .receipt-brand {
+      font-family: 'Yellowtail', cursive;
+      font-size: 2.1rem;
+      color: #000;
+      line-height: 1;
+    }
+    .receipt-sub {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #555;
+      font-weight: 700;
+    }
+    .receipt-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+    .receipt-meta {
+      font-size: 0.8rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .receipt-items {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      font-size: 0.83rem;
+    }
+    .receipt-items th {
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      color: #555;
+    }
+    .receipt-items td {
+      padding: 7px 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .receipt-total-box {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-top: 2px solid #111;
+      padding-top: 10px;
+      margin-bottom: 18px;
+    }
+    .receipt-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .btn-print {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 11px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.88rem;
+    }
+    .btn-email-order {
+      background: #16a34a;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    .btn-close-receipt {
+      background: #e5e5e5;
+      color: #222;
+      border: none;
+      padding: 9px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.82rem;
+    }
+
+    /* PRINT STYLES (Makes Receipt Print Cleanly) */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #receipt-modal, #receipt-modal * {
+        visibility: visible;
+      }
+      #receipt-modal {
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        padding: 0;
+      }
+      .receipt-actions {
+        display: none !important;
+      }
+    }
+
+    footer {
+      background: #000;
+      border-top: 1px solid #222;
+      padding: 28px 16px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #aaa;
+      line-height: 1.7;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-alert">
+    📍 New York Flagship Store &amp; Nationwide US Shipping! Inquiries: <a href="mailto:andertons.orders@gmail.com">andertons.orders@gmail.com</a>
+  </div>
+
+  <!-- TRUST & PHONE STRIP -->
+  <div class="trust-bar">
+    <div>
+      <span class="stars">★★★★★</span> <strong>4.9</strong>/5 <span style="color:#aaa;">verified</span>
+    </div>
+    <span class="trust-divider">|</span>
+    <a href="tel:02079460123" class="trust-link">
+      📞 020 7946 0123
+    </a>
+    <span class="trust-divider">|</span>
+    <span style="color:#ccc;">📍 New York</span>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header>
+    <div class="header-top">
+      <a href="#" class="brand-logo">
+        <span class="brand-script">Landrtons</span>
+        <span class="brand-sub">MUSIC CO.</span>
+      </a>
+
+      <div class="header-icons">
+        <button class="icon-btn" title="Last Receipt" onclick="openLastReceipt()">
+          <svg width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </button>
+
+        <button class="icon-btn" title="Shopping Cart" onclick="toggleCart(true)">
+          <svg width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+
+        <button class="icon-btn" title="Menu" onclick="toggleNav(true)">
+          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <input type="text" id="search-input" placeholder="Search professional electric guitars..." onkeyup="filterProducts()" />
+      <button onclick="filterProducts()" aria-label="Search">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- PROMO STRIP -->
+  <div class="promo-strip">
+    <div class="promo-inner">
+      <button class="promo-arrow" onclick="cyclePromo(-1)">&#8249;</button>
+      <div class="promo-card">
+        <div style="font-size:1.5rem;">🎸</div>
+        <div class="promo-text">
+          <strong id="promo-title">PREMIUM GUITAR COLLECTION</strong>
+          <span id="promo-desc">Free US Shipping on orders over $150</span>
+        </div>
+        <div style="font-weight:700; font-size:1.1rem;">&raquo;</div>
+      </div>
+      <button class="promo-arrow" onclick="cyclePromo(1)">&#8250;</button>
+    </div>
+  </div>
+
+  <!-- HERO DEAL BANNER -->
+  <section class="hero">
+    <div class="hero-tag">NEW YORK EXCLUSIVE COLLECTION</div>
+    <h1>PRO ELECTRIC &amp; ACOUSTIC GUITARS</h1>
+    <p>Explore our handpicked selection of professional guitars. Expert setup and nationwide US delivery included.</p>
+    <a href="#catalog" class="hero-cta">Shop Guitars Now</a>
+  </section>
+
+  <!-- PRODUCT STOREFRONT -->
+  <main class="store-section" id="catalog">
+    <div class="category-bar">
+      <button class="cat-btn active" onclick="setCategory('All', this)">All Guitars</button>
+      <button class="cat-btn" onclick="setCategory('White Series', this)">White Series ($3K)</button>
+      <button class="cat-btn" onclick="setCategory('Pro Series', this)">Pro Series ($2K)</button>
+    </div>
+
+    <div class="section-header">
+      <h2 id="catalog-heading">Featured Guitars</h2>
+      <span style="font-size:0.82rem; color:#aaa;" id="item-total-label">5 items</span>
+    </div>
+
+    <div class="product-grid" id="product-grid"></div>
+  </main>
+
+  <!-- OVERLAY -->
+  <div class="drawer-overlay" id="overlay" onclick="closeAllDrawers()"></div>
+
+  <!-- LEFT MOBILE MENU DRAWER -->
+  <aside class="nav-drawer" id="nav-drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <strong style="font-family:'Oswald',sans-serif; letter-spacing:1px;">CATEGORIES</strong>
+      <button class="close-btn" onclick="toggleNav(false)">&times;</button>
+    </div>
+    <ul>
+      <li onclick="menuSelect('All')">All Guitars</li>
+      <li onclick="menuSelect('White Series')">White Series ($3,000)</li>
+      <li onclick="menuSelect('Pro Series')">Pro Series ($2,000)</li>
+      <li onclick="toggleNav(false); openLastReceipt();">View Last Receipt</li>
+    </ul>
+    <div style="margin-top:24px; font-size:0.8rem; color:#aaa; line-height:1.6;">
+      <p><strong>Location:</strong> New York, NY</p>
+      <p><strong>Call:</strong> <a href="tel:02079460123" style="color:#fff;">020 7946 0123</a></p>
+      <p><strong>Email:</strong> <a href="mailto:andertons.orders@gmail.com" style="color:#fff;">andertons.orders@gmail.com</a></p>
+    </div>
+  </aside>
+
+  <!-- RIGHT SHOPPING CART & CHECKOUT DRAWER -->
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <h3>Your Cart (<span id="drawer-cart-count">0</span>)</h3>
+      <button class="close-btn" onclick="toggleCart(false)">&times;</button>
+    </div>
+
+    <div class="drawer-body">
+      <div id="cart-items-container"></div>
+
+      <!-- CUSTOMER & NEW YORK / US SHIPPING DETAILS FORM -->
+      <div class="checkout-form" id="checkout-section" style="display:none;">
+        <h4>Shipping &amp; Contact Details</h4>
+        
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="cust-name" placeholder="e.g. John Smith" required />
+        </div>
+
+        <div class="form-group">
+          <label>Your Email Address *</label>
+          <input type="email" id="cust-email" placeholder="you@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label>Your Phone Number *</label>
+          <input type="tel" id="cust-phone" placeholder="020 7946 0123" required />
+        </div>
+
+        <div class="form-group">
+          <label>Delivery Method *</label>
+          <select id="delivery-option" onchange="renderCart()">
+            <option value="0">New York Store Pickup — Free ($0.00)</option>
+            <option value="0">Standard US Ground Shipping — Free ($0.00)</option>
+            <option value="50">Express Air Delivery — $50.00</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Street Address *</label>
+          <input type="text" id="cust-address" placeholder="350 Fifth Avenue" required />
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <div class="form-group" style="flex: 2;">
+            <label>City *</label>
+            <input type="text" id="cust-city" value="New York" required />
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label>State *</label>
+            <input type="text" id="cust-state" value="NY" maxlength="2" required />
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label>Zip Code *</label>
+            <input type="text" id="cust-zip" placeholder="10001" required />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <div class="total-row">
+        <span>Total Payable:</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <button class="pay-btn" id="pay-btn" onclick="processCheckout()" disabled>
+        Generate Official Receipt &amp; Order
+      </button>
+    </div>
+  </aside>
+
+  <!-- OFFICIAL RECEIPT MODAL -->
+  <div class="receipt-modal" id="receipt-modal">
+    <div class="receipt-box">
+      <div class="receipt-header">
+        <div class="receipt-brand">Landrtons</div>
+        <div class="receipt-sub">MUSIC CO. • NEW YORK</div>
+        <div class="receipt-badge">Official Order Receipt</div>
+      </div>
+
+      <div class="receipt-meta" id="receipt-meta-content"></div>
+
+      <table class="receipt-items">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th style="text-align:center;">Qty</th>
+            <th style="text-align:right;">Price</th>
+          </tr>
+        </thead>
+        <tbody id="receipt-items-body"></tbody>
+      </table>
+
+      <div class="receipt-total-box">
+        <span>TOTAL AMOUNT:</span>
+        <span id="receipt-grand-total">$0.00</span>
+      </div>
+
+      <p style="font-size:0.75rem; color:#666; text-align:center; margin-bottom:14px;">
+        Tel: 020 7946 0123 | Email: andertons.orders@gmail.com<br/>
+        Click below to complete your order via email or save this receipt.
+      </p>
+
+      <div class="receipt-actions">
+        <button class="btn-email-order" id="send-email-btn">Complete Transaction via Email &raquo;</button>
+        <button class="btn-print" onclick="window.print()">Print / Save Receipt as PDF</button>
+        <button class="btn-close-receipt" onclick="closeReceipt()">Back to Store</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>Landrtons Music Co.</strong> — New York, NY</p>
+    <p>Phone: <a href="tel:02079460123">020 7946 0123</a> | Orders &amp; Support: <a href="mailto:andertons.orders@gmail.com">andertons.orders@gmail.com</a></p>
+    <p style="margin-top:6px; color:#666;">&copy; 2026 Landrtons Music Co. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const STORE_EMAIL = "andertons.orders@gmail.com";
+    const STORE_PHONE = "020 7946 0123";
+    const STORE_LOCATION = "New York";
+
+    // PRODUCT CATALOG
+    const products = [
+      {
+        id: 1,
+        name: "Fender Player Fusion Series Stratocaster (White)",
+        category: "White Series",
+        price: 3000,
+        image: "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 2,
+        name: "Fender Custom Shop Vintage White Stratocaster",
+        category: "White Series",
+        price: 3000,
+        image: "https://images.unsplash.com/photo-1550291652-6ea9114a47b1?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 3,
+        name: "Fender Custom Blue Stratocaster with P90 Pickups",
+        category: "Pro Series",
+        price: 2000,
+        image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 4,
+        name: "Gibson / Epiphone Les Paul Standard Sunburst",
+        category: "Pro Series",
+        price: 2000,
+        image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        id: 5,
+        name: "Fender Player Sunburst Stratocaster (HSS)",
+        category: "Pro Series",
+        price: 2000,
+        image: "https://images.unsplash.com/photo-1467139701976-18c22a96fa6a?auto=format&fit=crop&w=500&q=80"
+      }
+    ];
+
+    // PROMO SLIDER LOGIC
+    const promos = [
+      { title: "WHITE SERIES GUITARS", desc: "Special edition models priced at $3,000" },
+      { title: "PRO SERIES COLLECTION", desc: "Professional electric guitars at $2,000 each" },
+      { title: "CALL US: 020 7946 0123", desc: "New York flagship store & support" }
+    ];
+    let promoIndex = 0;
+
+    function cyclePromo(dir) {
+      promoIndex = (promoIndex + dir + promos.length) % promos.length;
+      document.getElementById("promo-title").textContent = promos[promoIndex].title;
+      document.getElementById("promo-desc").textContent = promos[promoIndex].desc;
+    }
+
+    // FILTER & RENDER STOREFRONT
+    let currentCategory = "All";
+
+    function setCategory(cat, btnElement) {
+      currentCategory = cat;
+      document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+      if (btnElement) btnElement.classList.add("active");
+      document.getElementById("catalog-heading").textContent = cat === "All" ? "Featured Guitars" : cat;
+      filterProducts();
+    }
+
+    function menuSelect(cat) {
+      toggleNav(false);
+      setCategory(cat, null);
+      document.getElementById("catalog").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function filterProducts() {
+      const query = document.getElementById("search-input").value.toLowerCase();
+      const grid = document.getElementById("product-grid");
+
+      const filtered = products.filter(p => {
+        const matchCat = currentCategory === "All" || p.category === currentCategory;
+        const matchSearch = p.name.toLowerCase().includes(query) || p.category.toLowerCase().includes(query);
+        return matchCat && matchSearch;
+      });
+
+      document.getElementById("item-total-label").textContent = `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:#aaa; padding:30px;">No guitars found matching "${query}".</p>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => `
+        <div class="product-card">
+          <div class="product-img-box">
+            <span class="stock-badge">In Stock</span>
+            <img src="${item.image}" alt="${item.name}" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-cat">${item.category}</div>
+            <div class="product-title">${item.name}</div>
+            <div class="product-price">$${item.price.toLocaleString()}</div>
+            <button class="add-cart-btn" onclick="addToCart(${item.id})">Add to Cart</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    // SHOPPING CART STATE
+    let cart = JSON.parse(localStorage.getItem("landrtons_ny_cart")) || [];
+
+    function saveCart() {
+      localStorage.setItem("landrtons_ny_cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function addToCart(productId) {
+      const product = products.find(p => p.id === productId);
+      const existing = cart.find(item => item.id === productId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1 });
+      }
+      saveCart();
+      toggleCart(true);
+    }
+
+    function changeQty(productId, delta) {
+      const item = cart.find(i => i.id === productId);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== productId);
+      }
+      saveCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById("cart-items-container");
+      const checkoutSection = document.getElementById("checkout-section");
+      const payBtn = document.getElementById("pay-btn");
+
+      const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+      document.getElementById("cart-count").textContent = totalItems;
+      document.getElementById("drawer-cart-count").textContent = totalItems;
+
+      if (cart.length === 0) {
+        container.innerHTML = `<p style="text-align:center; color:#888; padding:30px 0;">Your Landrtons cart is empty.</p>`;
+        checkoutSection.style.display = "none";
+        document.getElementById("cart-total").textContent = "$0.00";
+        payBtn.disabled = true;
+        return;
+      }
+
+      checkoutSection.style.display = "block";
+      payBtn.disabled = false;
+
+      container.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="cart-item-details">
+            <div class="cart-item-title">${item.name}</div>
+            <div class="cart-item-price">$${(item.price * item.qty).toLocaleString()}</div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
+              <span>${item.qty}</span>
+              <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+      const subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+      const shippingFee = parseInt(document.getElementById("delivery-option").value || "0", 10);
+      const grandTotal = subtotal + shippingFee;
+
+      document.getElementById("cart-total").textContent = `$${grandTotal.toLocaleString()}`;
+    }
+
+    // CHECKOUT & RECEIPT GENERATOR
+    function processCheckout() {
+      const name = document.getElementById("cust-name").value.trim();
+      const email = document.getElementById("cust-email").value.trim();
+      const phone = document.getElementById("cust-phone").value.trim();
+      const address = document.getElementById("cust-address").value.trim();
+      const city = document.getElementById("cust-city").value.trim();
+      const state = document.getElementById("cust-state").value.trim();
+      const zip = document.getElementById("cust-zip").value.trim();
+
+      if (!name || !email || !phone || !address || !city || !state || !zip) {
+        alert("Please fill out all required shipping and contact fields.");
+        return;
+      }
+
+      const deliverySelect = document.getElementById("delivery-option");
+      const deliveryLabel = deliverySelect.options[deliverySelect.selectedIndex].text;
+      const shippingFee = parseInt(deliverySelect.value || "0", 10);
+      const subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+      const grandTotal = subtotal + shippingFee;
+      const orderId = "LND-" + Math.floor(100000 + Math.random() * 900000);
+      const orderDate = new Date().toLocaleString("en-US", {
+        dateStyle: "medium",
+        timeStyle: "short"
+      });
+
+      const receiptData = {
+        orderId,
+        orderDate,
+        name,
+        email,
+        phone,
+        fullAddress: `${address}, ${city}, ${state} ${zip}`,
+        deliveryLabel,
+        shippingFee,
+        items: [...cart],
+        grandTotal
+      };
+
+      // Save last receipt so customer can reopen anytime
+      localStorage.setItem("landrtons_last_receipt", JSON.stringify(receiptData));
+
+      // Display the Official Receipt Modal
+      showReceiptModal(receiptData);
+
+      // Clear cart
+      cart = [];
+      saveCart();
+      toggleCart(false);
+    }
+
+    function showReceiptModal(data) {
+      document.getElementById("receipt-meta-content").innerHTML = `
+        <strong>Receipt #:</strong> ${data.orderId}<br/>
+        <strong>Date:</strong> ${data.orderDate}<br/>
+        <strong>Customer:</strong> ${data.name} (${data.phone})<br/>
+        <strong>Email:</strong> ${data.email}<br/>
+        <strong>Ship To:</strong> ${data.fullAddress}<br/>
+        <strong>Method:</strong> ${data.deliveryLabel}
+      `;
+
+      let rowsHtml = data.items.map(i => `
+        <tr>
+          <td>${i.name}</td>
+          <td style="text-align:center;">${i.qty}</td>
+          <td style="text-align:right;">$${(i.price * i.qty).toLocaleString()}</td>
+        </tr>
+      `).join("");
+
+      if (data.shippingFee > 0) {
+        rowsHtml += `
+          <tr>
+            <td>Express Shipping</td>
+            <td style="text-align:center;">1</td>
+            <td style="text-align:right;">$${data.shippingFee.toLocaleString()}</td>
+          </tr>
+        `;
+      }
+
+      document.getElementById("receipt-items-body").innerHTML = rowsHtml;
+      document.getElementById("receipt-grand-total").textContent = `$${data.grandTotal.toLocaleString()}`;
+
+      // Configure email button
+      const itemsText = data.items.map(i => `- ${i.name} (x${i.qty}): $${(i.price * i.qty).toLocaleString()}`).join("\n");
+      const subject = encodeURIComponent(`Order Receipt ${data.orderId} - ${data.name}`);
+      const body = encodeURIComponent(
+        `OFFICIAL ORDER RECEIPT (${data.orderId})\n` +
+        `Date: ${data.orderDate}\n\n` +
+        `Customer: ${data.name}\n` +
+        `Email: ${data.email}\n` +
+        `Phone: ${data.phone}\n` +
+        `Address: ${data.fullAddress}\n` +
+        `Shipping: ${data.deliveryLabel}\n\n` +
+        `Guitars Ordered:\n${itemsText}\n\n` +
+        `TOTAL PAYABLE: $${data.grandTotal.toLocaleString()}\n\n` +
+        `Please reply with payment details to complete this transaction.`
+      );
+
+      document.getElementById("send-email-btn").onclick = function() {
+        window.location.href = `mailto:${STORE_EMAIL}?subject=${subject}&body=${body}`;
+      };
+
+      document.getElementById("receipt-modal").classList.add("open");
+    }
+
+    function openLastReceipt() {
+      const saved = localStorage.getItem("landrtons_last_receipt");
+      if (!saved) {
+        alert("No recent receipt found. Add a guitar to your cart and checkout to generate a receipt!");
+        return;
+      }
+      showReceiptModal(JSON.parse(saved));
+    }
+
+    function closeReceipt() {
+      document.getElementById("receipt-modal").classList.remove("open");
+    }
+
+    // DRAWER CONTROLS
+    function toggleCart(open) {
+      document.getElementById("cart-drawer").classList.toggle("open", open);
+      document.getElementById("overlay").classList.toggle("open", open);
+    }
+
+    function toggleNav(open) {
+      document.getElementById("nav-drawer").classList.toggle("open", open);
+      document.getElementById("overlay").classList.toggle("open", open);
+    }
+
+    function closeAllDrawers() {
+      toggleCart(false);
+      toggleNav(false);
+    }
+
+    // Initialize
+    filterProducts();
+    renderCart();
+  </script>
+</body>
+</html>
